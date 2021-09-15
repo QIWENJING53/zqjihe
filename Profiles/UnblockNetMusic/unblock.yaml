@@ -1,6 +1,6 @@
 # https://cdn.jsdelivr.net/gh/DesperadoJ/Rules-for-UnblockNeteaseMusic/Clash/Proxy/NeteaseMusic.yaml
 # https://lolico.me/subscribe/Clash/config.yaml
-# https://t.me/zhongleleQun
+# https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
 
 proxies:
   - {name: 🎧 解锁网易云音乐1, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
