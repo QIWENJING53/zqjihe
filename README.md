@@ -1,0 +1,1 @@
+This repo is only used for learning and communication. The legal responsibility for other purposes has nothing to do with the author (downloading and using means you agree with the above views), please delete it within 24 hours after downloading/using it.
