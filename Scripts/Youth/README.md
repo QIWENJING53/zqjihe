@@ -2,7 +2,8 @@
 # 「中青阅读极速版」
 ## 青龙
 * [青龙面板跑中青教程](https://note.youdao.com/ynoteshare1/index.html?id=3a17dce54e83fd25a7a3de757b9b70cc)
-一键拉库命令
+
+青龙拉库命令：
 ```
 ql repo https://github.com/PoetryU/Scientist.git "Scripts/Youth" "backup"
 ```
