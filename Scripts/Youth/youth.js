@@ -11,14 +11,14 @@ https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
 =========Quantumult X=========
 [task_local]
 # 中青签到&转盘宝箱
-*/10 5-23 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+0-59/10 5-23 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 
 ==============Loon==============
 [Script]
-cron "*/10 5-23 * * *" script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱
+cron "0-59/10 5-23 * * *" script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱
 
 ==============Surge=============
-中青签到&转盘宝箱 = type=cron,cronexp="*/10 5-23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js
+中青签到&转盘宝箱 = type=cron,cronexp="0-59/10 5-23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js
 */
 
 const $ = new Env("中青看点");

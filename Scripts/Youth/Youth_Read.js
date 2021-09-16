@@ -111,7 +111,7 @@ if (!$.isNode()) {
 
 function bodyInfo() {
     return new Promise((resolve, reject) => {
-        $.get(batHost('article/(info\/get|info|detail).json?' + articlebody), async(error, resp, data) => {
+        $.get(batHost('article/info/get.json?' + articlebody), async(error, resp, data) => {
             let bodyobj = JSON.parse(data);
             //$.log(JSON.stringify(bodyobj,null,2))
                 $.begin = $.begin + 1;
