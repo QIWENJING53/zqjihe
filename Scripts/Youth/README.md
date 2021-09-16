@@ -1,8 +1,16 @@
 ## 目前比较靠谱的圈X薅羊毛之一：
 # 「中青阅读极速版」
+## 青龙
+* [青龙面板跑中青教程](https://note.youdao.com/ynoteshare1/index.html?id=3a17dce54e83fd25a7a3de757b9b70cc)
+一键拉库命令
+```
+ql repo https://github.com/PoetryU/Scientist.git "Scripts/Youth" "backup"
+```
+
+## Quantumult X
 
 * iOS，建议安装v2.0.2版本，如何安装旧版见：[【免越狱】iOS任意版本号APP下载v5.1 (出处: 吾爱破解论坛)](https://www.52pojie.cn/thread-1284776-1-1.html)
-* [青龙面板跑中青教程](https://note.youdao.com/ynoteshare1/index.html?id=3a17dce54e83fd25a7a3de757b9b70cc)
+
 
 ## 提供的rewrite脚本兼容中青新旧版
 
@@ -42,7 +50,7 @@ https://raw.githubusercontent.com/PoetryU/Scientist/master/QuantumultX/rewrite/Y
 10 1-23/3 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js, tag=中青自动阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 
 # 中青浏览赚
-20 30 6 * * * https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js, tag=中青浏览赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+20 30 6 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js, tag=中青浏览赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 ```
 ----------
 

@@ -3,9 +3,9 @@
 
 中青看点浏览赚+看看赚任务，手动完成任务，获取请求体，支持boxjs及Github Actions，多请求用"&"分开，点击任务，支持自动获取请求
 
-https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json url script-request-body youth_gain.js
+https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json url script-request-body https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js
 
-https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json url script-request-body youth_gain.js
+https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json url script-request-body https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js
 
   强制增加中青看点看看赚入口，和签到Cookie有冲突，请使用时添加，不用时请禁用
   https:\/\/kandian\.wkandian\.com\/V17\/NewTaskIos\/getTaskList url script-response-body youdata.js
@@ -13,6 +13,21 @@ https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json url script-req
 
 多个请求体时用'&'号或者换行隔开"，本脚本可自动删除失效请求，请须知 ‼️
 
+仓库：https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth
+脚本兼容: Quantumult X, Surge, Loon, Node.js
+https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
+
+=========Quantumult X=========
+[task_local]
+# 中青浏览赚
+20 30 6 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js, tag=中青浏览赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+
+==============Loon==============
+[Script]
+cron "20 30 6 * * *" script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js, tag=中青浏览赚
+
+==============Surge=============
+中青浏览赚 = type=cron,cronexp="20 30 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth_gain.js
 */
 
 
