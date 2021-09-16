@@ -1,12 +1,14 @@
 /*
-更新时间: 2021-02-28 09:03
-Github Actions使用方法见[@lxk0301](https://raw.githubusercontent.com/lxk0301/scripts/master/githubAction.md) 使用方法大同小异
+更新时间: 2021-09-16 14:30
 
-点击几篇文章和视频，自动获取阅读请求，在Github Actions中的Secrets新建name为'YOUTH_READ'的一个值，拷贝抓包的请求体到下面Value的文本框中，添加的请求体越多，获得青豆次数越多，本脚本不包含任何推送通知
+点击几篇文章和视频，自动获取阅读请求，添加的请求体越多，获得青豆次数越多，本脚本不包含任何推送通知
 
 多个请求体时用'&'号或者换行隔开" ‼️
 
+https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
+
 */
+
 
 const $ = new Env("中青看点阅读")
 //const notify = $.isNode() ? require('./sendNotify') : '';
@@ -19,15 +21,15 @@ let videoscore = 0,readscore = 0;
 let artArr = [], delbody = 0;
 if (isGetbody = typeof $request !==`undefined`) {
    Getbody();
-   $done()
+   $.done()
 } 
 let lastIndex = $.getdata('zqbody_index')
 if (!$.isNode() && !YouthBody == true) {
     $.log("您未获取阅读请求，请求阅读后获取")
     $.msg($.name, "您未获取阅读请求，请求阅读后获取", "", {
-        'open-url': "https://kandian.youth.cn/u/UnEWm"
+        'open-url': "https://kandian.wkandian.com/u/UnEWm"
     })
-    return
+    $.done()
 } else if (!$.isNode() && YouthBody.indexOf("&") == -1) {
     ReadArr.push(YouthBody)
 } else {
@@ -80,7 +82,7 @@ if (!$.isNode()) {
     if (smallzq == "true") {
         $.log("     请注意缩减请求开关已打开‼️\n     如不需要    请强制停止\n     关闭Boxjs缩减请求开关")
     };
-    $.index = 0;
+    $.index = 0, readtimes="";
     for (var i = indexLast ? indexLast : 0; i < ReadArr.length; i++) {
         if (ReadArr[i]) {
             articlebody = ReadArr[i];
@@ -99,7 +101,7 @@ if (!$.isNode()) {
 
 function bodyInfo() {
     return new Promise((resolve, reject) => {
-        $.get(batHost('article/info/get.json?' + articlebody), async(error, resp, data) => {
+        $.get(batHost('article/(info/get|info|detail).json?' + articlebody), async(error, resp, data) => {
             let bodyobj = JSON.parse(data);
             //$.log(JSON.stringify(bodyobj,null,2))
                 $.begin = $.begin + 1;
@@ -191,6 +193,9 @@ function AutoRead() {
 }
 
 function removebody() {
+  if($.isNode()) {
+    return;
+  }
   if (articlebody !== ReadArr[0]) {
       smallbody = $.getdata('youth_autoread').replace("&" + articlebody, "");
   } else {
@@ -201,10 +206,10 @@ function removebody() {
 
 function batHost(api, body) {
     return {
-        url: 'https://ios.baertt.com/v5/' + api,
+        url: 'https://kandian.wkandian.com/v5/' + api,
         headers: {
-            'User-Agent': 'KDApp/2.0.2 (iPhone; iOS 14.5; Scale/3.00)',
-            'Host': 'ios.baertt.com',
+            'User-Agent': 'KDApp/2.4.1 (iPhone; iOS 14.6; Scale/3.00)',
+            'Host': 'kandian.wkandian.com',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: body
@@ -213,7 +218,7 @@ function batHost(api, body) {
 
 function readTime() {
     return new Promise((resolve, reject) => {
-        $.post(batHost('user/stay.json', timebodyVal), (error, resp, data) => {
+        $.post(batHost('user/app_stay.json', timebodyVal), (error, resp, data) => {
             let timeres = JSON.parse(data)
             if (timeres.error_code == 0) {
                 readtimes = timeres.time / 60
@@ -225,8 +230,12 @@ function readTime() {
 }
 
 function Getbody() {
-    if ($request && $request.method != `OPTIONS` && $request.url.match(/\/article\/info\/get/)) {
-        bodyVal = $request.url.split("?")[1];
+    if ($request && ($request.url.match(/\/article\/(info/get|info|detail)/)|| $request.url.match(/\/article\/complete/))) {
+       if($request.url.match(/complete/)){
+          bodyVal = $request.body
+       } else {
+        bodyVal = $request.url.split("?")[1]
+        };
         if (YouthBody) {
             if (YouthBody.indexOf(bodyVal) > -1) {
                 $.log("此阅读请求已存在，本次跳过")
@@ -242,7 +251,7 @@ function Getbody() {
             $.log(`${$.name}获取阅读: 成功, YouthBodys: ${bodyVal}`);
             $.msg($.name, `获取第一个阅读请求: 成功🎉`, ``)
         }
-    } else if ($request && $request.method != `OPTIONS` && $request.url.match(/\/v5\/user\/stay/)) {
+    } else if ($request && $request.method != `OPTIONS` && $request.url.match(/\/v5\/user\/app_stay/)) {
         const timebodyVal = $request.body;
         if (timebodyVal) $.setdata(timebodyVal, 'autotime_zq');
         $.log(`${$.name}获取阅读时长: 成功, timebodyVal: ${timebodyVal}`);
