@@ -101,7 +101,7 @@ if (!$.isNode()) {
 
 function bodyInfo() {
     return new Promise((resolve, reject) => {
-        $.get(batHost('article/(info/get|info|detail).json?' + articlebody), async(error, resp, data) => {
+        $.get(batHost('article/(info\/get|info|detail).json?' + articlebody), async(error, resp, data) => {
             let bodyobj = JSON.parse(data);
             //$.log(JSON.stringify(bodyobj,null,2))
                 $.begin = $.begin + 1;
@@ -230,7 +230,7 @@ function readTime() {
 }
 
 function Getbody() {
-    if ($request && ($request.url.match(/\/article\/(info/get|info|detail)/)|| $request.url.match(/\/article\/complete/))) {
+    if ($request && ($request.url.match(/\/article\/(info\/get|info|detail)/)|| $request.url.match(/\/article\/complete/))) {
        if($request.url.match(/complete/)){
           bodyVal = $request.body
        } else {
