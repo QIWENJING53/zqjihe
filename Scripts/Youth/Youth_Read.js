@@ -1,12 +1,22 @@
 /*
 更新时间: 2021-09-16 14:30
-
 点击几篇文章和视频，自动获取阅读请求，添加的请求体越多，获得青豆次数越多，本脚本不包含任何推送通知
-
 多个请求体时用'&'号或者换行隔开" ‼️
-
+仓库：https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth
+脚本兼容: Quantumult X, Surge, Loon, Node.js
 https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
 
+=========Quantumult X=========
+[task_local]
+# 中青自动阅读
+10 1-23/3 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js, tag=中青自动阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+
+==============Loon==============
+[Script]
+cron "10 1-23/3 * * *" script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js, tag=中青自动阅读
+
+==============Surge=============
+中青自动阅读 = type=cron,cronexp="10 1-23/3 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js
 */
 
 

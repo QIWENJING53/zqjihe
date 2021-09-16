@@ -39,7 +39,7 @@ https://raw.githubusercontent.com/PoetryU/Scientist/master/QuantumultX/rewrite/Y
 */10 5-23 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青看点极速版, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 
 # 中青自动阅读
-20 15 */2 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js, tag=中青自动阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+10 1-23/3 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/Youth_Read.js, tag=中青自动阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
 
 # 中青浏览赚
 20 30 6 * * * https://raw.githubusercontent.com/Sunert/Script/master/Task/youth_gain.js, tag=中青浏览赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true

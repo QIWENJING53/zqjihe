@@ -4,7 +4,21 @@
 本脚本仅适用于中青看点极速版领取青豆
 食用说明请查看本仓库目录 https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth#readme ，其中打卡挑战赛可通过Boxjs开关，报名时间为23点，早起打卡时间为早5点，报名需1000青豆押金，打卡成功可返1000+青豆，打卡失败则押金不予返还，请注意时间运行，
 转发文章获得青豆不实，请无视
+
+脚本兼容: Quantumult X, Surge, Loon, Node.js
 https://t.me/joinchat/AAAAAE7rKoq4s-WIv3OfrA
+
+=========Quantumult X=========
+[task_local]
+# 中青签到&转盘宝箱
+*/10 5-23 * * * https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true
+
+==============Loon==============
+[Script]
+cron "*/10 5-23 * * *" script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js, tag=中青签到&转盘宝箱
+
+==============Surge=============
+中青签到&转盘宝箱 = type=cron,cronexp="*/10 5-23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/Youth/youth.js
 */
 
 const $ = new Env("中青看点");
