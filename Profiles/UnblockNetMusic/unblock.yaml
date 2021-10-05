@@ -5,6 +5,5 @@
 proxies:
   - {name: 🎧 解锁网易云音乐1, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_d39m}
   - {name: 🎧 解锁网易云音乐2, server: blockmusic2.poetyin.com, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 解锁网易云音乐3, server: 3music.poetyin.com, port: 100, type: http, country:cn CN, tls: false}
-  - {name: 🎧 解锁网易云音乐4, server: music.lolico.me, port: 39000, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 解锁网易云音乐5, server: 120.55.164.155, port: 26685, type: ss, cipher: chacha20-ietf, password: nihao123}
+  - {name: 🎧 解锁网易云音乐3, server: music.lolico.me, port: 39000, type: http, country:cn CN, tls: false, skip-cert-verify: false}
+  - {name: 🎧 解锁网易云音乐4, server: 120.55.164.155, port: 26685, type: ss, cipher: chacha20-ietf, password: nihao123}
