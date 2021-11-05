@@ -1,4 +1,4 @@
-* [Quantumult X Config Samle](https://raw.githubusercontent.com/PoetryU/Scientist/master/QuantumultX/QuanX_iPhone.conf)
+* [Quantumult X Config Sample](https://raw.githubusercontent.com/PoetryU/Scientist/master/QuantumultX/QuanX_iPhone.conf)
 * [A tutorial of ZhongQing-Scripts on Quantumult X](https://github.com/PoetryU/Scientist/tree/master/Scripts/Youth#readme)
 * [Unblock NetEaseMusic Node list](https://raw.githubusercontent.com/PoetryU/Scientist/master/Profiles/UnblockNetMusic/unblock.yaml)
 
